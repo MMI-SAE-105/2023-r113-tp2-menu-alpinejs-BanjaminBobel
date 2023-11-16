@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <html lang="fr" x-data="{menuIsOpen: false}">
+  <html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test menu</title>
@@ -19,6 +19,9 @@
       .header__menuBtn {
         position: relative;
         z-index: 10;
+      }
+      .noscroll {
+        overflow: hidden;
       }
     </style>
   </head>
