@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr" x-data=" (menuIsOpen: false?",  <head>
-    <meta charset="UTF-8" />
+<head>
+  <html lang="fr" x-data="{menuIsOpen: false}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test menu</title>
@@ -10,9 +10,11 @@
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
-      <button aria-controle="mainNAv"> menu </button>
+      <button aria-controls="mainNAv" @click="menuIsOpen = ! menuISOpen"> 
+        menu
+       </button>
       <h1>Test de menu</h1>
-      <nav id="mainNav">
+      <nav id="mainNav" x-show="menuIsOpen">
         <ul>
           <li><a href="b"></a></li>
           <li><a href="b"></a></li>
